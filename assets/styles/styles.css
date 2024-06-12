@@ -132,9 +132,11 @@ a {
 }
 
 .hero-wrap .hero {
+  margin-bottom: 20px;
   width: 100%;
   height: 500px;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 /* BRAND */
