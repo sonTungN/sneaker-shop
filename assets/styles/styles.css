@@ -39,11 +39,14 @@ a {
 }
 
 /* HEADER */
+.header {
+  background-color: var(--primary);
+}
+
 .header .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary);
   padding: 15px 0;
 }
 
