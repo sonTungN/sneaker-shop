@@ -89,7 +89,6 @@ a {
 
 /* HERO */
 .hero-wrap {
-  padding-top: 50px;
   background: var(--primary);
 }
 
@@ -133,16 +132,13 @@ a {
 }
 
 .hero-wrap .hero {
-  margin-bottom: 20px;
   width: 100%;
-  height: 500px;
   object-fit: cover;
-  border-radius: 15px;
 }
 
 /* BRAND */
 .brand {
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 .brand .row {
@@ -191,9 +187,13 @@ a {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* PRODUCTS */
+/* STATS */
 .stats {
-  margin-top: 120px;
+  margin-top: 70px;
+  padding: 70px 0;
+  background-color: rgba(255, 228, 132, 1);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .stats .title {
@@ -207,12 +207,12 @@ a {
 
 .stats .title:before {
   position: absolute;
-  top: -15px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
   content: "";
   display: inline-block;
-  width: 70px;
+  width: 120px;
   height: 4px;
   background: #000339;
   border-radius: 12px;
@@ -247,3 +247,5 @@ a {
   font-size: 1.8rem;
   color: var(--description);
 }
+
+/* PRODUCTS */
