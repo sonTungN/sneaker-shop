@@ -1,2 +1,3 @@
 # SneakerShop
-## Deloyment at: https://sontungn.github.io/SneakerShop/
+
+- Deloyment at: https://sontungn.github.io/SneakerShop/
