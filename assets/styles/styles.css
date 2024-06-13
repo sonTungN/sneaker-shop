@@ -355,3 +355,133 @@ a {
   width: 30px;
   margin-left: 8px;
 }
+
+/* SUBSCRIPTIONS */
+.subscription {
+  margin-top: 60px;
+}
+
+.subscription .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(241, 235, 228, 1);
+  border: 1px solid black;
+}
+
+.subscription .info {
+  padding: 0 80px;
+}
+
+.subscription .info .title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: var(--heading);
+}
+
+.subscription .info .desc {
+  width: 490px;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  color: var(--description);
+  opacity: 0.75;
+}
+
+.subscription .sub-image {
+  width: 50%;
+  min-width: 462px;
+  height: 420px;
+  object-fit: cover;
+}
+
+.subscription .sub-cta {
+  margin-top: 30px;
+  width: 200px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  padding: 50px 0 30px;
+}
+
+.footer .row {
+  display: flex;
+}
+
+.footer .row-top {
+  gap: 180px;
+}
+
+.footer .heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1c1c1d;
+}
+
+.footer .list,
+.footer .desc {
+  margin-top: 30px;
+}
+
+.footer .item {
+  margin-top: 20px;
+}
+
+.footer .item a,
+.footer .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #7a7a7e;
+  white-space: nowrap;
+}
+
+.footer .desc {
+  white-space: normal;
+  line-height: 1.75;
+}
+
+.footer .social {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: rgba(241, 235, 228, 1);
+}
+
+.footer .social-link:not(:first-child) {
+  margin-left: 15px;
+}
+
+.footer .social-link:hover {
+  background: #ebebeb;
+}
+
+.footer .row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.footer .row-bottom .logo-name {
+  width: 80px;
+  margin-left: -10px;
+}
+
+.footer .copyright {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #c2c2c2;
+}
