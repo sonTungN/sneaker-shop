@@ -5,6 +5,7 @@
 :root {
   --primary: rgba(254, 250, 240, 1);
   --heading: #000336;
+  --description: #5a6473;
 }
 
 html {
@@ -115,7 +116,7 @@ a {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.78;
-  color: #5a6473;
+  color: var(--description);
 }
 
 .hero-wrap .hero-cta {
@@ -188,4 +189,61 @@ a {
 
 .brand .images a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* PRODUCTS */
+.stats {
+  margin-top: 120px;
+}
+
+.stats .title {
+  position: relative;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-align: center;
+  color: #000339;
+}
+
+.stats .title:before {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 4px;
+  background: #000339;
+  border-radius: 12px;
+}
+
+.stats .desc {
+  width: 600px;
+  max-width: 100%;
+  margin: 20px auto 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  text-align: center;
+  color: var(--description);
+}
+
+.stats .row-qty {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.stats .row-qty .qty {
+  font-weight: 600;
+  font-size: 6.4rem;
+  color: #000000;
+}
+
+.stats .row-qty .qty-desc {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--description);
 }
