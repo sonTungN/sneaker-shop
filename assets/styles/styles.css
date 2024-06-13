@@ -136,9 +136,13 @@ a {
   object-fit: cover;
 }
 
+.brand-logo {
+  margin-top: -3px;
+}
+
 /* BRAND */
 .brand {
-  margin-top: 40px;
+  margin-top: 35px;
 }
 
 .brand .row {
