@@ -148,6 +148,10 @@ a {
   margin-top: -3px;
 }
 
+.brand-logo img {
+  width: 100%;
+}
+
 /* BRAND */
 .brand {
   margin-top: 35px;
