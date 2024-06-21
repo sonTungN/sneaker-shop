@@ -79,17 +79,32 @@ a {
   margin-left: -10px;
 }
 
-.header .nav-bar ul {
+.header .nav-bar .list {
   display: flex;
   gap: 30px;
 }
 
-.header .nav-bar li a {
+.header .nav-bar .list a {
   font-size: 1.8rem;
   font-weight: 600;
-  text-align: left;
   color: var(--heading);
   padding: 12px 8px;
+}
+
+.header .nav-bar .list .cart {
+  position: relative;
+}
+
+.header .nav-bar .list .cart-qty {
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: 90px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background-color: rgba(0, 3, 54, 0.2);
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .header .action-link {
