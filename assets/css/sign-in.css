@@ -36,13 +36,14 @@ a {
 
 a:hover,
 button:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
 }
 
 .sign-in {
   width: 1240px;
   max-width: calc(100% - 48px);
+  margin: 0 auto;
 }
 
 .content {
@@ -120,6 +121,32 @@ button:hover {
   margin-top: 30px;
 }
 
+.social-action .social-cta {
+  display: flex;
+  align-items: center;
+  border: 2px solid #a1a1a1;
+  border-radius: 6px;
+  padding: 10px 13px;
+}
+
+.social-action .social-cta:hover {
+  opacity: 0.5;
+}
+
+.form-block .social-cta .icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.form-block .social-cta .description {
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--description);
+}
+
 .form-block .form {
   position: relative;
   margin-top: 70px;
@@ -127,7 +154,7 @@ button:hover {
 
 .form-block .form::before {
   position: absolute;
-  content: "-OR-";
+  content: "- OR -";
   top: -45px;
   left: 50%;
   transform: translateX(-50%);
@@ -153,10 +180,10 @@ button:hover {
   border-bottom: 1px solid black;
 }
 
-.form-block .form button {
+.form-block .form .submit-btn {
   font-weight: 600;
   font-size: 1.5rem;
-  line-height: 2;
+  line-height: 2.5;
   border-radius: 6px;
   background-color: var(--secondary);
 }
@@ -173,4 +200,10 @@ button:hover {
   margin-left: 4px;
   font-weight: 600;
   color: #000339;
+}
+
+/* ========== BUTTON LOCKED ========== */
+.form:has(:invalid) .submit-btn {
+  opacity: 0.3;
+  pointer-events: none;
 }
