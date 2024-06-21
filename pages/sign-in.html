@@ -23,85 +23,85 @@
 
     <!-- Favicon -->
     <link
+      href="../assets/favicon/apple-icon-57x57.png"
       rel="apple-touch-icon"
       sizes="57x57"
-      href="./assets/favicon/apple-icon-57x57.png"
     />
     <link
+      href="../assets/favicon/apple-icon-60x60.png"
       rel="apple-touch-icon"
       sizes="60x60"
-      href="./assets/favicon/apple-icon-60x60.png"
     />
     <link
+      href="../assets/favicon/apple-icon-72x72.png"
       rel="apple-touch-icon"
       sizes="72x72"
-      href="./assets/favicon/apple-icon-72x72.png"
     />
     <link
+      href="../assets/favicon/apple-icon-76x76.png"
       rel="apple-touch-icon"
       sizes="76x76"
-      href="./assets/favicon/apple-icon-76x76.png"
     />
     <link
+      href="../assets/favicon/apple-icon-114x114.png"
       rel="apple-touch-icon"
       sizes="114x114"
-      href="./assets/favicon/apple-icon-114x114.png"
     />
     <link
+      href="../assets/favicon/apple-icon-120x120.png"
       rel="apple-touch-icon"
       sizes="120x120"
-      href="./assets/favicon/apple-icon-120x120.png"
     />
     <link
+      href="../assets/favicon/apple-icon-144x144.png"
       rel="apple-touch-icon"
       sizes="144x144"
-      href="./assets/favicon/apple-icon-144x144.png"
     />
     <link
+      href="../assets/favicon/apple-icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
-      href="./assets/favicon/apple-icon-152x152.png"
     />
     <link
+      href="../assets/favicon/apple-icon-180x180.png"
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/favicon/apple-icon-180x180.png"
     />
     <link
+      href="../assets/favicon/android-icon-192x192.png"
       rel="icon"
-      type="image/png"
       sizes="192x192"
-      href="./assets/favicon/android-icon-192x192.png"
+      type="image/png"
     />
     <link
+      href="../assets/favicon/favicon-32x32.png"
       rel="icon"
-      type="image/png"
       sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
+      type="image/png"
     />
     <link
+      href="../assets/favicon/favicon-96x96.png"
       rel="icon"
-      type="image/png"
       sizes="96x96"
-      href="./assets/favicon/favicon-96x96.png"
+      type="image/png"
     />
     <link
+      href="../assets/favicon/favicon-16x16.png"
       rel="icon"
-      type="image/png"
       sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
+      type="image/png"
     />
-    <link rel="manifest" href="./assets/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
+    <link href="../assets/favicon/manifest.json" rel="manifest" />
+    <meta content="#ffffff" name="msapplication-TileColor" />
     <meta
-      name="msapplication-TileImage"
       content="./assets/favicon/ms-icon-144x144.png"
+      name="msapplication-TileImage"
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta content="#ffffff" name="theme-color" />
 
     <!-- Link Styles-->
-    <link href="assets/css/sign-in.css" rel="stylesheet" />
-    <link href="assets/css/reset.css" rel="stylesheet" />
+    <link href="../assets/css/sign-in.css" rel="stylesheet" />
+    <link href="../assets/css/reset.css" rel="stylesheet" />
 
     <title>Sign In</title>
   </head>
@@ -113,14 +113,14 @@
           <div class="info-block">
             <div class="logo-block">
               <img
-                src="./assets/img/sneaker-logo.png"
                 alt="Digg."
                 class="logo"
+                src="../assets/img/sneaker-logo.png"
               />
               <img
-                src="./assets/img/sneaker-shoes.png"
                 alt="Digg."
                 class="logo-name"
+                src="../assets/img/sneaker-shoes.png"
               />
             </div>
             <h1 class="heading">
@@ -132,29 +132,29 @@
             </p>
 
             <img
-              src="./assets/img/sign-in-hero.png"
               alt="Sneaker"
               class="hero"
+              src="../assets/img/sign-in-hero.png"
             />
           </div>
 
           <div class="form-block">
             <h2 class="sub-heading">Log In Account</h2>
             <div class="social-action">
-              <a href="#!" class="social-cta">
+              <a class="social-cta" href="#!">
                 <img
-                  src="./assets/icon/google-icon.svg"
                   alt="Sign in Google"
                   class="icon"
+                  src="../assets/icon/google-icon.svg"
                 />
                 <div class="description">Continue with Google</div>
               </a>
 
-              <a href="#!" class="social-cta">
+              <a class="social-cta" href="#!">
                 <img
-                  src="./assets/icon/facebook-icon.svg"
                   alt="Sign in Facebook"
                   class="icon"
+                  src="../assets/icon/facebook-icon.svg"
                 />
                 <div class="description">Continue with Facebook</div>
               </a>
@@ -163,19 +163,19 @@
             <!-- FORM -->
             <form
               action="https://api-gateway.fullstack.edu.vn/action_page.php"
+              autocomplete="off"
               class="form"
               method="post"
-              autocomplete="off"
             >
               <div>
                 <label for="email">
                   <input
-                    type="email"
-                    placeholder="Email"
+                    autofocus
                     id="email"
                     name="email"
+                    placeholder="Email"
                     required
-                    autofocus
+                    type="email"
                   />
                 </label>
               </div>
@@ -183,19 +183,19 @@
               <div>
                 <label for="password">
                   <input
-                    type="password"
-                    placeholder="Password"
                     id="password"
                     name="password"
                     pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{5,15}$"
+                    placeholder="Password"
                     required
+                    type="password"
                   />
                 </label>
                 <!--5 < length < 15, at least 1 cap 1 num, no special-->
               </div>
 
               <div>
-                <button type="submit" class="submit-btn">LOG IN</button>
+                <button class="submit-btn" type="submit">LOG IN</button>
               </div>
 
               <p class="option">
