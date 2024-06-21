@@ -23,87 +23,87 @@
 
     <!-- Favicon -->
     <link
+      href="./assets/favicon/apple-icon-57x57.png"
       rel="apple-touch-icon"
       sizes="57x57"
-      href="./assets/favicon/apple-icon-57x57.png"
     />
     <link
+      href="./assets/favicon/apple-icon-60x60.png"
       rel="apple-touch-icon"
       sizes="60x60"
-      href="./assets/favicon/apple-icon-60x60.png"
     />
     <link
+      href="./assets/favicon/apple-icon-72x72.png"
       rel="apple-touch-icon"
       sizes="72x72"
-      href="./assets/favicon/apple-icon-72x72.png"
     />
     <link
+      href="./assets/favicon/apple-icon-76x76.png"
       rel="apple-touch-icon"
       sizes="76x76"
-      href="./assets/favicon/apple-icon-76x76.png"
     />
     <link
+      href="./assets/favicon/apple-icon-114x114.png"
       rel="apple-touch-icon"
       sizes="114x114"
-      href="./assets/favicon/apple-icon-114x114.png"
     />
     <link
+      href="./assets/favicon/apple-icon-120x120.png"
       rel="apple-touch-icon"
       sizes="120x120"
-      href="./assets/favicon/apple-icon-120x120.png"
     />
     <link
+      href="./assets/favicon/apple-icon-144x144.png"
       rel="apple-touch-icon"
       sizes="144x144"
-      href="./assets/favicon/apple-icon-144x144.png"
     />
     <link
+      href="./assets/favicon/apple-icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
-      href="./assets/favicon/apple-icon-152x152.png"
     />
     <link
+      href="./assets/favicon/apple-icon-180x180.png"
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/favicon/apple-icon-180x180.png"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
       href="./assets/favicon/android-icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
       href="./assets/favicon/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
       href="./assets/favicon/favicon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
       href="./assets/favicon/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
     />
-    <link rel="manifest" href="./assets/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
+    <link href="./assets/favicon/manifest.json" rel="manifest" />
+    <meta content="#ffffff" name="msapplication-TileColor" />
     <meta
-      name="msapplication-TileImage"
       content="./assets/favicon/ms-icon-144x144.png"
+      name="msapplication-TileImage"
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta content="#ffffff" name="theme-color" />
 
     <!-- Link Styles-->
-    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/cart.css" rel="stylesheet" />
     <link href="assets/css/reset.css" rel="stylesheet" />
 
-    <title>Sneaker Shop</title>
+    <title>My Cart</title>
   </head>
   <body>
     <header class="header fixed-header">
@@ -134,9 +134,9 @@
               <a href="#!">PRODUCTS</a>
             </li>
             <li>
-              <a href="#!">
+              <a class="cart" href="#!">
                 MY CART
-                <span class="cart-qty">(0)</span>
+                <span class="cart-qty">0</span>
               </a>
             </li>
           </ul>
@@ -149,529 +149,78 @@
       </div>
     </header>
 
-    <main>
-      <!-- HERO -->
-      <div class="hero-wrap">
-        <div class="content">
-          <div class="body">
-            <div class="info-block">
-              <h1 class="title">Elevate Your Style with Premium Sneakers</h1>
-              <p class="desc">
-                Discover the perfect blend of comfort, performance, and style
-                with our exclusive collection. Designed for athletes and
-                enthusiasts alike. Shop now and step into excellence!
-              </p>
-              <a class="btn hero-cta" href="#!">Shop Now </a>
-            </div>
+    <main class="cart-page">
+      <div class="content">
+        <section class="cart-container">
+          <h2 class="title">Peek at Your Kicks in the Cart!</h2>
 
-            <div class="hero-block">
+          <!-- Item 1 -->
+          <div class="cart-list">
+            <div class="cart-item">
+              <label>
+                <input class="checkbox" name="input" type="checkbox" />
+              </label>
               <img
-                alt="Hero Image"
-                class="hero"
-                src="./assets/img/hero-image.jpg"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="brand-logo">
-          <img alt="Brand Logo" src="./assets/img/brand-logo.svg" />
-        </div>
-      </div>
-
-      <!-- BRAND -->
-      <div class="brand">
-        <div class="content">
-          <div class="row">
-            <img
-              alt="Sneaker Logo"
-              class="sneaker-logo"
-              src="./assets/img/sneaker-shoes.svg"
-            />
-
-            <div class="stars">
-              <img alt="Star" class="star" src="assets/icon/star.svg" />
-              <img alt="Star" class="star" src="assets/icon/star.svg" />
-              <img alt="Star" class="star" src="assets/icon/star.svg" />
-              <img alt="Star" class="star" src="assets/icon/star.svg" />
-              <img alt="Star" class="star" src="assets/icon/star.svg" />
-            </div>
-          </div>
-
-          <div class="row-desc">
-            <p class="desc">
-              More than 200+ brands trust <strong>Digg.</strong>
-            </p>
-            <p class="desc">5 Star Ratings (1k+ Reviews)</p>
-          </div>
-
-          <div class="images">
-            <a href="#!">
-              <img alt="Brand 1" src="./assets/img/brand1.svg" />
-            </a>
-            <a href="#!">
-              <img alt="Brand 2" src="./assets/img/brand2.svg" />
-            </a>
-            <a href="#!">
-              <img alt="Brand 3" src="./assets/img/brand3.svg" />
-            </a>
-            <a href="#!">
-              <img alt="Brand 4" src="./assets/img/brand4.svg" />
-            </a>
-            <a href="#!">
-              <img alt="Brand 5" src="./assets/img/brand5.svg" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- STATS-->
-      <div class="stats">
-        <div class="content">
-          <h2 class="title">You’ve Discovered Sneaker Heaven!</h2>
-          <p class="desc">
-            Find your perfect style from our vast collection. Our survey shows
-            most shoppers prioritize unique and exclusive designs.
-          </p>
-
-          <div class="row row-qty">
-            <div class="qty-item">
-              <strong class="qty">200+</strong>
-              <p class="qty-desc">Sneakers For Sale</p>
-            </div>
-
-            <div class="qty-item">
-              <strong class="qty">1,000+</strong>
-              <p class="qty-desc">Sneakers Recently Sold</p>
-            </div>
-            <div class="qty-item">
-              <strong class="qty">100+</strong>
-              <p class="qty-desc">Price Reduced</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PRODUCTS -->
-      <div class="products">
-        <div class="content">
-          <header>
-            <h2 class="title">Shop Our Latest Drops!</h2>
-            <p class="desc">
-              Step into the latest styles with our newest sneaker collection.
-            </p>
-          </header>
-
-          <div class="item-list">
-            <!-- Item 1-->
-            <div class="item">
-              <img
-                alt="Adidas Trea"
+                alt="Item Thumb"
                 class="thumb"
                 src="./assets/img/sneaker1.png"
               />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">ADIDAS TREA UNLIMITED WHITE</a>
-                </h3>
-                <p class="desc price">1,800,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(153)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
-            </div>
-
-            <!-- Item 2-->
-            <div class="item">
+              <div class="item-name">ADIDAS TREA UNLIMITED WHITE</div>
+              <div class="item-price">1,800,000 VND</div>
+              <div class="qty">1</div>
               <img
-                alt="Adidas Trea"
-                class="thumb"
-                src="./assets/img/sneaker2.png"
+                alt="Delete Icon"
+                class="delete"
+                src="./assets/icon/delete-icon.svg"
               />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">ADIDAS TRAE YOUNG 1 96 OLYMPICS</a>
-                </h3>
-                <p class="desc price">2,350,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(93)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
             </div>
 
-            <!--Item 3 -->
-            <div class="item">
+            <!--  Item 2 -->
+            <div class="cart-item">
+              <label>
+                <input class="checkbox" name="input" type="checkbox" />
+              </label>
               <img
-                alt="Nike KD"
+                alt="Item Thumb"
                 class="thumb"
-                src="./assets/img/sneaker3.png"
+                src="./assets/img/sneaker1.png"
               />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">NIKE KD 16 READY PLAY</a>
-                </h3>
-                <p class="desc price">3,400,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(90)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="item">
+              <div class="item-name">ADIDAS TREA UNLIMITED WHITE</div>
+              <div class="item-price">1,800,000 VND</div>
+              <div class="qty">1</div>
               <img
-                alt="Nike Freak"
-                class="thumb"
-                src="./assets/img/sneaker4.png"
+                alt="Delete Icon"
+                class="delete"
+                src="./assets/icon/delete-icon.svg"
               />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">NIKE FREAK IMMOTALITY BLACK UNIVERSITY RED</a>
-                </h3>
-                <p class="desc price">2,200,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(210)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
             </div>
 
-            <!--Item 5 -->
-            <div class="item">
+            <!--  Item 3 -->
+            <div class="cart-item">
+              <label>
+                <input class="checkbox" name="input" type="checkbox" />
+              </label>
               <img
-                alt="Jordan Zion"
+                alt="Item Thumb"
                 class="thumb"
-                src="./assets/img/sneaker5.png"
+                src="./assets/img/sneaker1.png"
               />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">JORDAN ZION 3 MUD, SWEAT AND TEARS</a>
-                </h3>
-                <p class="desc price">3,600,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(53)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
-            </div>
-
-            <!-- Item 6 -->
-            <div class="item">
+              <div class="item-name">ADIDAS TREA UNLIMITED WHITE</div>
+              <div class="item-price">1,800,000 VND</div>
+              <div class="qty">1</div>
               <img
-                alt="Nike Lebron"
-                class="thumb"
-                src="./assets/img/sneaker6.png"
+                alt="Delete Icon"
+                class="delete"
+                src="./assets/icon/delete-icon.svg"
               />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">NIKE LEBRON WITNESS 8 WHITE LIGHT SMOKE GREY</a>
-                </h3>
-                <p class="desc price">2,500,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(121)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
-            </div>
-
-            <!-- Item 7 -->
-            <div class="item">
-              <img alt="Wade" class="thumb" src="./assets/img/sneaker7.png" />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">WADE SHADOW 5 BUZZER BEATER</a>
-                </h3>
-                <p class="desc price">2,400,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(120)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
-            </div>
-
-            <!-- Item 8 -->
-            <div class="item">
-              <img
-                alt="UA Anatomix"
-                class="thumb"
-                src="./assets/img/sneaker4.png"
-              />
-              <div class="body">
-                <p class="desc">1 color</p>
-                <h3 class="title line-clamp">
-                  <a href="#!">UA ANATOMIX SPAWN 5 PINK BLACK</a>
-                </h3>
-                <p class="desc price">1,800,000 VND</p>
-
-                <div class="rating">
-                  <div class="stars">
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                    <img
-                      alt="Rating Star"
-                      class="star"
-                      src="assets/icon/rating-star.svg"
-                    />
-                  </div>
-                  <p class="desc">(46)</p>
-                </div>
-                <div class="btn product-cta">ADD TO CART</div>
-              </div>
             </div>
           </div>
-
-          <a href="#!" class="link">
-            <span>Discover more sneakers</span>
-            <img
-              src="assets/icon/arrow-right.svg"
-              alt="Right Arrow"
-              class="arrow"
-            />
-          </a>
-        </div>
+        </section>
       </div>
-
-      <div class="subscription">
+      <div class="checkout">
         <div class="content">
-          <div class="body">
-            <div class="info">
-              <h2 class="title">You Spend, You Earn</h2>
-              <p class="desc">
-                Ultimate Rewards. Sign in or join now to earn points with every
-                purchase for valuable gifts.
-              </p>
-              <div class="btn sub-cta">JOIN NOW</div>
-            </div>
-
-            <img
-              src="./assets/img/sub-hero.jpg"
-              alt="Sub-Image"
-              class="sub-image"
-            />
+          <div class="checkout-wrap">
+            <div class="btn">CHECK OUT</div>
           </div>
         </div>
       </div>
@@ -758,9 +307,9 @@
           <div class="logo-block">
             <img alt="Digg." class="logo" src="./assets/img/sneaker-logo.svg" />
             <img
-              src="./assets/img/sneaker-shoes.svg"
               alt="Logo Name"
               class="logo-name"
+              src="./assets/img/sneaker-shoes.svg"
             />
           </div>
           <p class="copyright">Copyright 2024.com, All rights reserved.</p>
