@@ -152,7 +152,7 @@
               id="sign-in"
               method="post"
             >
-              <div class="form-group invalid">
+              <div class="form-group">
                 <label for="email">
                   <input
                     autofocus
@@ -164,7 +164,7 @@
                     type="email"
                   />
                 </label>
-                <span class="form-message">ok</span>
+                <span class="form-message"></span>
               </div>
 
               <div class="form-group">
@@ -179,7 +179,7 @@
                     type="password"
                   />
                 </label>
-                <span class="form-message">ok</span>
+                <span class="form-message"></span>
                 <!--5 < length < 15, at least 1 cap 1 num, no special-->
               </div>
 
@@ -194,5 +194,18 @@
         </div>
       </div>
     </main>
+    <script src="../assets/scripts/validation.js"></script>
+    <script>
+      Validator({
+        form: "#sign-in",
+        formGroup: ".form-group",
+        formErrorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#email"),
+          Validator.isRequired("#password"),
+          // Validator.minLength("#password", 6),
+        ],
+      });
+    </script>
   </body>
 </html>
