@@ -1,0 +1,25 @@
+{
+  "shoes": [
+    {
+      "id": "1",
+      "color-qty": "1",
+      "name": "ADIDAS TRAE UNLIMITED WHITE",
+      "price": "1,800,000 VND",
+      "star-desc": "(153)"
+    },
+    {
+      "id": "2",
+      "color-qty": "1",
+      "name": "ADIDAS TRAE YOUNG 1 96 OLYMPIC",
+      "price": "2,350,000 VND",
+      "star-desc": "(93)"
+    },
+    {
+      "id": "3",
+      "color-qty": "1",
+      "name": "NIKE KD 16 READY PLAY",
+      "price": "3,400,000 VND",
+      "star-desc": "(90)"
+    }
+  ]
+}
