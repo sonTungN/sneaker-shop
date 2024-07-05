@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 :root {
@@ -7,6 +8,7 @@
   --secondary: rgba(255, 228, 132, 1);
   --heading: #000336;
   --description: #5a6473;
+  --error: #f33a58;
 }
 
 html {
@@ -115,38 +117,16 @@ button:hover {
   color: #000339;
 }
 
-/* ========== SOCIAL ACTION ========== */
-/*.form-block .social-action {*/
-/*  display: flex;*/
-/*  justify-content: space-between;*/
-/*  margin-top: 30px;*/
-/*}*/
-
-/*.social-action .social-cta {*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  border: 2px solid #a1a1a1;*/
-/*  border-radius: 6px;*/
-/*  padding: 10px 13px;*/
-/*}*/
-
-/*.social-action .social-cta:hover {*/
-/*  opacity: 0.5;*/
-/*}*/
-
-/*.form-block .social-cta .icon {*/
-/*  width: 25px;*/
-/*  height: 25px;*/
-/*  border-radius: 6px;*/
-/*  object-fit: cover;*/
-/*}*/
-
-/*.form-block .social-cta .description {*/
-/*  margin-left: 15px;*/
-/*  font-weight: 500;*/
-/*  font-size: 1.4rem;*/
-/*  color: var(--description);*/
-/*}*/
+.form-block .sub-desc {
+  width: 600px;
+  display: inline-block;
+  max-width: calc(100%);
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--description);
+}
 
 /* ========== FORM BLOCK ========== */
 .form-block {
@@ -156,26 +136,12 @@ button:hover {
 }
 
 .form-block .sign-in-form {
-  /*position: relative;*/
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
-/*.form-block .form::before {*/
-/*  position: absolute;*/
-/*  content: "- OR -";*/
-/*  top: -45px;*/
-/*  left: 50%;*/
-/*  transform: translateX(-50%);*/
-/*  font-weight: 600;*/
-/*  font-size: 1.5rem;*/
-/*  line-height: 2;*/
-/*  color: #000339;*/
-/*}*/
-
-.form-block .sign-in-form input,
-.form-block .sign-in-form button {
+.form-block .sign-in-form .form-control,
+.form-block .sign-in-form .submit-btn {
   width: 100%;
-  margin-bottom: 25px;
   border: none;
   outline: none;
   font-weight: 400;
@@ -184,7 +150,15 @@ button:hover {
   color: #000339;
 }
 
-.form-block .form-group input {
+.form-group .form-message {
+  display: inline-block;
+  margin: 5px 0 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--error);
+}
+
+.form-block .form-group .form-control {
   border-bottom: 1px solid black;
 }
 
@@ -197,6 +171,7 @@ button:hover {
 }
 
 .form-block .sign-up-option {
+  margin-top: 25px;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2;
@@ -205,13 +180,25 @@ button:hover {
 }
 
 .form-block .sign-up-option a {
-  margin-left: 4px;
+  display: inline-block;
+  margin-left: -5px;
   font-weight: 700;
+  padding: 15px;
   color: #000339;
 }
 
+/* ========== INVALID INPUT ========== */
+.form-block .form-group.invalid .form-control {
+  color: var(--error);
+}
+
+.form-block .form-group.invalid .form-control {
+  border-color: var(--error);
+  border-width: 2px;
+}
+
 /* ========== BUTTON LOCKED ========== */
-.form:has(:invalid) .submit-btn {
+.sign-in-form:has(.invalid) .submit-btn {
   opacity: 0.3;
   pointer-events: none;
 }
