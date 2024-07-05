@@ -107,8 +107,8 @@
   </head>
 
   <body>
-    <main class="main-pane">
-      <div class="sign-in">
+    <main>
+      <div class="sign-in-block">
         <div class="content">
           <div class="info-block">
             <div class="logo-block">
@@ -140,34 +140,35 @@
 
           <div class="form-block">
             <h2 class="sub-heading">Log In Account</h2>
-            <div class="social-action">
-              <a class="social-cta" href="#!">
-                <img
-                  alt="Sign in Google"
-                  class="icon"
-                  src="../assets/icon/google-icon.svg"
-                />
-                <div class="description">Continue with Google</div>
-              </a>
+            <!--<div class="social-action">-->
+            <!--  <a class="social-cta" href="#!">-->
+            <!--    <img-->
+            <!--      alt="Sign in Google"-->
+            <!--      class="icon"-->
+            <!--      src="../assets/icon/google-icon.svg"-->
+            <!--    />-->
+            <!--    <div class="description">Continue with Google</div>-->
+            <!--  </a>-->
 
-              <a class="social-cta" href="#!">
-                <img
-                  alt="Sign in Facebook"
-                  class="icon"
-                  src="../assets/icon/facebook-icon.svg"
-                />
-                <div class="description">Continue with Facebook</div>
-              </a>
-            </div>
+            <!--  <a class="social-cta" href="#!">-->
+            <!--    <img-->
+            <!--      alt="Sign in Facebook"-->
+            <!--      class="icon"-->
+            <!--      src="../assets/icon/facebook-icon.svg"-->
+            <!--    />-->
+            <!--    <div class="description">Continue with Facebook</div>-->
+            <!--  </a>-->
+            <!--</div>-->
 
             <!-- FORM -->
             <form
               action="https://api-gateway.fullstack.edu.vn/action_page.php"
               autocomplete="off"
-              class="form"
+              class="sign-in-form"
+              id="sign-in"
               method="post"
             >
-              <div>
+              <div class="form-group">
                 <label for="email">
                   <input
                     autofocus
@@ -180,7 +181,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="form-group">
                 <label for="password">
                   <input
                     id="password"
@@ -194,13 +195,12 @@
                 <!--5 < length < 15, at least 1 cap 1 num, no special-->
               </div>
 
-              <div>
-                <button class="submit-btn" type="submit">LOG IN</button>
+              <button class="submit-btn" type="submit">LOG IN</button>
+              <div class="form-group">
+                <p class="sign-up-option">
+                  Don't have an account? <a href="#!">Sign Up</a>
+                </p>
               </div>
-
-              <p class="option">
-                Don't have an account? <a href="#!">Sign Up</a>
-              </p>
             </form>
           </div>
         </div>
