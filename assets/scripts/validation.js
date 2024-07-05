@@ -1,6 +1,32 @@
 function Validator(formOption) {
-  let formSelector = document.querySelector(formOption.form);
+  // Get Selected Parent Element By Selector
+  function getParentBySelector(selector, parentSelector) {
+    while (selector.parentElement) {
+      if (selector.parentElement.matches(parentSelector)) {
+        return selector.parentElement;
+      }
 
+      selector = selector.parentElement;
+    }
+  }
+
+  // Displaying Error Message On Interface
+  function displayErrorMessage(inputElement, rule, errorElement) {
+    let errorMessage = rule.validate(inputElement.value);
+    if (errorMessage) {
+      errorElement.innerHTML = errorMessage;
+      getParentBySelector(inputElement, formOption.formGroup).classList.add(
+        "invalid",
+      );
+    } else {
+      errorElement.innerHTML = "";
+      getParentBySelector(inputElement, formOption.formGroup).classList.remove(
+        "invalid",
+      );
+    }
+  }
+
+  let formSelector = document.querySelector(formOption.form);
   if (formSelector) {
     formOption.rules.forEach((rule) => {
       let inputElement = formSelector.querySelector(rule.selector);
@@ -10,18 +36,7 @@ function Validator(formOption) {
       ).querySelector(".form-message");
 
       inputElement.onblur = function () {
-        let errorMessage = rule.validate(inputElement.value);
-        if (errorMessage) {
-          errorElement.innerHTML = errorMessage;
-          getParentBySelector(this, formOption.formGroup).classList.add(
-            "invalid",
-          );
-        } else {
-          errorElement.innerHTML = "";
-          getParentBySelector(this, formOption.formGroup).classList.remove(
-            "invalid",
-          );
-        }
+        displayErrorMessage(this, rule, errorElement);
       };
 
       inputElement.oninput = function () {
@@ -44,14 +59,3 @@ Validator.isRequired = function (selector, message = "") {
 };
 
 Validator.minLength = function () {};
-
-// Get Selected Parent Element By Selector
-function getParentBySelector(selector, parentSelector) {
-  while (selector.parentElement) {
-    if (selector.parentElement.matches(parentSelector)) {
-      return selector.parentElement;
-    }
-
-    selector = selector.parentElement;
-  }
-}
