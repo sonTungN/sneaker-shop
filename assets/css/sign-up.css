@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --primary: rgba(254, 250, 240, 1);
+  --secondary: rgba(255, 228, 132, 1);
+  --heading: #000336;
+  --description: #5a6473;
+  --error: #f33a58;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+input,
+button,
+label {
+  font-family: Poppins, sans-serif;
+  font-size: 1.6rem;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+/* ========== COMMON ========== */
+a {
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.sign-up-block {
+  width: 1240px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 210px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* ========== INFO BLOCK ========== */
+.content .info-block {
+  position: relative;
+  width: 37%;
+  height: 100%;
+  padding: 20px;
+  background-color: var(--secondary);
+}
+
+.content .logo-name {
+  width: 80px;
+  margin-left: -10px;
+}
+
+.content .heading {
+  width: 410px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 3.7rem;
+  line-height: 1.19;
+  color: #000336;
+}
+
+.content .heading strong {
+  font-size: 4rem;
+}
+
+.content .desc {
+  width: 400px;
+  display: inline-block;
+  max-width: 530px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--description);
+}
+
+.content .info-block .hero {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  width: 350px;
+  transform: rotate(15deg);
+}
+
+/* ========== FORM BLOCK ========== */
+.content .form-block {
+  width: 63%;
+  padding: 87px 120px;
+  background-color: #fff;
+}
+
+.form-block .sub-heading {
+  width: 100%;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #000339;
+}
+
+.form-block .sub-desc {
+  width: 600px;
+  display: inline-block;
+  max-width: calc(100%);
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--description);
+}
+
+/* ========== FORM BLOCK ========== */
+.form-block {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+}
+
+.form-block .sign-up-form {
+  margin-top: 25px;
+}
+
+.form-block .sign-up-form .form-control,
+.form-block .sign-up-form .submit-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #000339;
+}
+
+.form-group .form-message {
+  display: inline-block;
+  margin: 5px 0 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--error);
+}
+
+.form-block .form-group .form-control {
+  border-bottom: 1px solid black;
+}
+
+.form-block .sign-up-form .submit-btn {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5;
+  border-radius: 6px;
+  background-color: var(--secondary);
+}
+
+.form-block .sign-in-option {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: center;
+  color: #000339;
+}
+
+.form-block .sign-in-option a {
+  display: inline-block;
+  margin-left: -5px;
+  font-weight: 700;
+  padding: 15px;
+  color: #000339;
+}
+
+/* ========== INVALID INPUT ========== */
+.form-block .form-group.invalid .form-control {
+  color: var(--error);
+}
+
+.form-block .form-group.invalid .form-control {
+  border-color: var(--error);
+  border-width: 2px;
+}
+
+/* ========== BUTTON LOCKED ========== */
+.sign-up-form:has(.invalid) .submit-btn {
+  opacity: 0.3;
+  pointer-events: none;
+}
