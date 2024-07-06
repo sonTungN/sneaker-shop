@@ -155,7 +155,6 @@
               <div class="form-group">
                 <label for="full-name">
                   <input
-                    autofocus
                     class="form-control"
                     id="full-name"
                     name="full-name"
@@ -164,13 +163,12 @@
                     type="text"
                   />
                 </label>
-                <span class="form-message">ok</span>
+                <span class="form-message"></span>
               </div>
 
               <div class="form-group">
                 <label for="email">
                   <input
-                    autofocus
                     class="form-control"
                     id="email"
                     name="email"
@@ -179,7 +177,7 @@
                     type="email"
                   />
                 </label>
-                <span class="form-message">ok</span>
+                <span class="form-message"></span>
               </div>
 
               <div class="form-group">
@@ -194,7 +192,7 @@
                     type="text"
                   />
                 </label>
-                <span class="form-message">ok</span>
+                <span class="form-message"></span>
                 <!--5 < length < 15, at least 1 cap 1 num, no special-->
               </div>
 
@@ -210,7 +208,7 @@
                     type="text"
                   />
                 </label>
-                <span class="form-message">ok</span>
+                <span class="form-message"></span>
               </div>
 
               <button class="submit-btn" type="submit">CREATE ACCOUNT</button>
@@ -224,5 +222,20 @@
         </div>
       </div>
     </main>
+    <script src="../assets/scripts/validation.js"></script>
+    <script>
+      Validator({
+        form: "#sign-up",
+        formGroup: ".form-group",
+        formErrorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#full-name", "Please enter your full name"),
+          Validator.isRequired("#email", "Please enter your email!"),
+          Validator.isEmail("#email"),
+          Validator.isRequired("#password", "Please enter your password!"),
+          Validator.isPassword("#password"),
+        ],
+      });
+    </script>
   </body>
 </html>

@@ -12,7 +12,14 @@ function Validator(formOption) {
 
   // Displaying Error Message On Interface
   function displayErrorMessage(inputElement, rule, errorElement) {
-    let errorMessage = rule.validate(inputElement.value);
+    let rules = selectorRules[rule.selector];
+    let errorMessage;
+
+    for (let i = 0; i < rules.length; i++) {
+      errorMessage = rules[i](inputElement.value);
+      if (errorMessage) break;
+    }
+
     if (errorMessage) {
       errorElement.innerHTML = errorMessage;
       getParentBySelector(inputElement, formOption.formGroup).classList.add(
@@ -26,27 +33,39 @@ function Validator(formOption) {
     }
   }
 
-  let formSelector = document.querySelector(formOption.form);
-  if (formSelector) {
+  let selectorRules = {};
+
+  let formElement = document.querySelector(formOption.form);
+  if (formElement) {
     formOption.rules.forEach((rule) => {
-      let inputElement = formSelector.querySelector(rule.selector);
+      // Get all rules for a selector
+      if (!Array.isArray(selectorRules[rule.selector])) {
+        selectorRules[rule.selector] = [rule.validate];
+      } else {
+        selectorRules[rule.selector].push(rule.validate);
+      }
+
+      let inputElement = formElement.querySelector(rule.selector);
       let errorElement = getParentBySelector(
         inputElement,
         formOption.formGroup,
-      ).querySelector(".form-message");
+      ).querySelector(formOption.formErrorSelector);
 
+      // Action Handler
       inputElement.onblur = function () {
-        displayErrorMessage(this, rule, errorElement);
+        displayErrorMessage(inputElement, rule, errorElement);
       };
 
       inputElement.oninput = function () {
         errorElement.innerHTML = "";
-        getParentBySelector(this, formOption.formGroup).classList.remove(
-          "invalid",
-        );
+        getParentBySelector(
+          inputElement,
+          formOption.formGroup,
+        ).classList.remove("invalid");
       };
     });
   }
+  console.log(selectorRules);
 }
 
 Validator.isRequired = function (selector, message = "") {
@@ -58,4 +77,26 @@ Validator.isRequired = function (selector, message = "") {
   };
 };
 
-Validator.minLength = function () {};
+Validator.isEmail = function (selector, message = "") {
+  return {
+    selector: selector,
+    validate: function (value) {
+      let pattern = /^\w+('-'?\w+)*@\w+('-'?\w+)*(\.\w{2,3})+$/;
+      return pattern.test(value)
+        ? undefined
+        : message || "Please enter a valid email!";
+    },
+  };
+};
+
+Validator.isPassword = function (selector, message = "") {
+  return {
+    selector: selector,
+    validate: function (value) {
+      let pattern = /^[a-zA-Z0-9]{5,15}$/;
+      return pattern.test(value)
+        ? undefined
+        : message || "Must have at least 5 characters with no special!";
+    },
+  };
+};
