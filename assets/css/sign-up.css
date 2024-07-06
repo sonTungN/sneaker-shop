@@ -193,7 +193,7 @@ button:hover {
 }
 
 /* ========== BUTTON LOCKED ========== */
-.sign-up-form:has(.invalid) .submit-btn {
+.sign-up-form .submit-btn.disable {
   opacity: 0.3;
   pointer-events: none;
 }

@@ -38,6 +38,7 @@ function Validator(formOption) {
 
   let formElement = document.querySelector(formOption.form);
   if (formElement) {
+    // Submit action handling
     formElement.onsubmit = (e) => {
       e.preventDefault();
 
@@ -74,8 +75,8 @@ function Validator(formOption) {
       }
     };
 
+    // Get all rules for a selector
     formOption.rules.forEach((rule) => {
-      // Get all rules for a selector
       if (!Array.isArray(selectorRules[rule.selector])) {
         selectorRules[rule.selector] = [rule.validate];
       } else {
@@ -91,6 +92,29 @@ function Validator(formOption) {
       // Action Handler
       inputElement.onblur = function () {
         displayErrorMessage(inputElement, rule, errorElement);
+
+        let submitButton = formElement.querySelector(".submit-btn");
+        let isDisabled = false;
+        if (submitButton) {
+          let inputElement = formElement.querySelectorAll("[name]");
+          Array.from(inputElement).forEach((element) => {
+            if (
+              getParentBySelector(
+                element,
+                formOption.formGroup,
+              ).classList.contains("invalid")
+            ) {
+              isDisabled = true;
+            }
+          });
+
+          if (isDisabled) {
+            if (!submitButton.classList.contains("disable"))
+              submitButton.classList.add("disable");
+          } else {
+            submitButton.classList.remove("disable");
+          }
+        }
       };
 
       inputElement.oninput = function () {
@@ -102,7 +126,6 @@ function Validator(formOption) {
       };
     });
   }
-  // console.log(selectorRules);
 }
 
 Validator.isRequired = function (selector, message = "") {
