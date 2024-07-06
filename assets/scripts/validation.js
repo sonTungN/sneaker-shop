@@ -31,12 +31,49 @@ function Validator(formOption) {
         "invalid",
       );
     }
+    return !errorMessage;
   }
 
   let selectorRules = {};
 
   let formElement = document.querySelector(formOption.form);
   if (formElement) {
+    formElement.onsubmit = (e) => {
+      e.preventDefault();
+
+      let isFormValid = true;
+
+      formOption.rules.forEach((rule) => {
+        let inputElement = formElement.querySelector(rule.selector);
+        let errorElement = getParentBySelector(
+          inputElement,
+          formOption.formGroup,
+        ).querySelector(formOption.formErrorSelector);
+
+        let isValid = displayErrorMessage(inputElement, rule, errorElement);
+        if (!isValid) {
+          isFormValid = false;
+        }
+      });
+
+      if (isFormValid) {
+        if (typeof formOption.onSubmit === "function") {
+          let validInput = formElement.querySelectorAll("[name]");
+          let validInputValues = Array.from(validInput).reduce(function (
+            output,
+            curr,
+          ) {
+            output[curr.name] = curr.value;
+
+            return output;
+          }, {});
+          formOption.onSubmit(validInputValues);
+        }
+      } else {
+        formElement.submit();
+      }
+    };
+
     formOption.rules.forEach((rule) => {
       // Get all rules for a selector
       if (!Array.isArray(selectorRules[rule.selector])) {

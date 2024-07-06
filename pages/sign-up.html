@@ -159,7 +159,6 @@
                     id="full-name"
                     name="full-name"
                     placeholder="Enter your full name"
-                    required
                     type="text"
                   />
                 </label>
@@ -173,7 +172,6 @@
                     id="email"
                     name="email"
                     placeholder="Enter your email"
-                    required
                     type="email"
                   />
                 </label>
@@ -186,9 +184,7 @@
                     class="form-control"
                     id="password"
                     name="password"
-                    pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{5,15}$"
                     placeholder="Enter your password"
-                    required
                     type="text"
                   />
                 </label>
@@ -202,16 +198,16 @@
                     class="form-control"
                     id="password-confirmation"
                     name="password-confirmation"
-                    pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{5,15}$"
                     placeholder="Confirm your password"
-                    required
                     type="text"
                   />
                 </label>
                 <span class="form-message"></span>
               </div>
 
-              <button class="submit-btn" type="submit">CREATE ACCOUNT</button>
+              <button class="submit-btn disable" type="submit">
+                CREATE ACCOUNT
+              </button>
               <div class="form-group">
                 <p class="sign-in-option">
                   Already have an account? <a href="./sign-in.html">Log In</a>
@@ -243,6 +239,10 @@
             return document.querySelector("#sign-up #password").value;
           }),
         ],
+
+        onSubmit: function (data) {
+          console.log(data);
+        },
       });
     </script>
   </body>

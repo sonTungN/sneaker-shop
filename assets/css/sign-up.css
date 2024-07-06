@@ -108,6 +108,8 @@ button:hover {
   width: 63%;
   padding: 87px 120px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-block .sub-heading {
@@ -127,13 +129,6 @@ button:hover {
   font-size: 1.6rem;
   line-height: 1.5;
   color: var(--description);
-}
-
-/* ========== FORM BLOCK ========== */
-.form-block {
-  display: flex;
-  flex-direction: column;
-  /*justify-content: space-between;*/
 }
 
 .form-block .sign-up-form {
