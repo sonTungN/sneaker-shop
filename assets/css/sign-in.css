@@ -132,11 +132,11 @@ button:hover {
 .form-block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: flex-start;*/
 }
 
 .form-block .sign-in-form {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .form-block .sign-in-form .form-control,
@@ -171,7 +171,6 @@ button:hover {
 }
 
 .form-block .sign-up-option {
-  margin-top: 25px;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2;
