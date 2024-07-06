@@ -229,11 +229,19 @@
         formGroup: ".form-group",
         formErrorSelector: ".form-message",
         rules: [
-          Validator.isRequired("#full-name", "Please enter your full name"),
+          Validator.isRequired("#full-name", "Please enter your full name!"),
           Validator.isRequired("#email", "Please enter your email!"),
           Validator.isEmail("#email"),
           Validator.isRequired("#password", "Please enter your password!"),
           Validator.isPassword("#password"),
+          Validator.isMax("#password", 10),
+          Validator.isRequired(
+            "#password-confirmation",
+            "Please confirm your password!",
+          ),
+          Validator.isConfirmed("#password-confirmation", function () {
+            return document.querySelector("#sign-up #password").value;
+          }),
         ],
       });
     </script>

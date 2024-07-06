@@ -65,7 +65,7 @@ function Validator(formOption) {
       };
     });
   }
-  console.log(selectorRules);
+  // console.log(selectorRules);
 }
 
 Validator.isRequired = function (selector, message = "") {
@@ -84,7 +84,7 @@ Validator.isEmail = function (selector, message = "") {
       let pattern = /^\w+('-'?\w+)*@\w+('-'?\w+)*(\.\w{2,3})+$/;
       return pattern.test(value)
         ? undefined
-        : message || "Please enter a valid email!";
+        : message || "Email input is invalid!";
     },
   };
 };
@@ -93,10 +93,30 @@ Validator.isPassword = function (selector, message = "") {
   return {
     selector: selector,
     validate: function (value) {
-      let pattern = /^[a-zA-Z0-9]{5,15}$/;
+      let pattern = /^[a-zA-Z0-9]{5,}$/;
       return pattern.test(value)
         ? undefined
-        : message || "Must have at least 5 characters with no special!";
+        : message || "At least 5 characters with no special!";
+    },
+  };
+};
+
+Validator.isMax = function (selector, length) {
+  return {
+    selector: selector,
+    validate: function (value) {
+      return value.length <= length ? undefined : "10 characters LIMIT!";
+    },
+  };
+};
+
+Validator.isConfirmed = function (selector, getConfirmedValue, message = "") {
+  return {
+    selector: selector,
+    validate: function (value) {
+      return value === getConfirmedValue()
+        ? undefined
+        : message || "Input value is not the same!";
     },
   };
 };
